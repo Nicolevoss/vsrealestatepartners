@@ -1,0 +1,1316 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+
+background-color:white;
+
+width:100%;
+
+font-size: 20px;
+}
+#menu__toggle {
+opacity: 0;
+}
+.menu__btn{
+    display: flex;
+    align-items: center;
+position: fixed;
+top: 20px;
+right: 20px;
+width: 26px;
+height: 26px;;
+z-index: 1;
+
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+display: block;
+position:absolute;
+width: 100%;
+height: 2px;
+background-color: black;
+}
+.menu__btn > span::before {
+content: '';
+top:-8px;
+}
+.menu__btn > span::after {
+    content: '';
+top:8px;
+
+}
+
+.menu__box {
+
+display:block;
+position: fixed;
+visibility: hidden;
+top:0;
+left:-100%;
+width:30%;
+height:100%;
+margin: 0;
+padding: 80px 0;
+list-style: none;
+text-decoration: none;
+text-align: center;
+background-color: #FAFAFC;
+}
+
+
+.menu__item {
+display:block;
+padding: 12px 24px;
+color:#333;
+text-decoration: none;
+}
+.menu__item:hover {
+background-color: #CFD8DC;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+top:0;
+transform: rotate(0deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+top: 0;
+transform: rotate(90deg)
+}
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+left:0%;
+}
+
+.menu__item a, 
+.menu__box a {
+    text-decoration: none; 
+    color: #FF8A63;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+ul{
+    color: white;
+    text-decoration: none; 
+    list-style: none; 
+}
+
+.responsive-image {
+    position: relative;
+top:-130px;
+padding-bottom: 5px;
+    width: 40%;
+    height: 870px;
+    background-image: url('images/Nordzypern.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Wenn der Bildschirm kleiner als 768px ist */
+  @media screen and (max-width: 768px) {
+    .responsive-image {
+      background-image: url(images/zweitimo.jpeg); 
+    }
+  }
+  
+  /* Wenn der Bildschirm kleiner als 480px ist */
+  @media screen and (max-width: 480px) {
+    .responsive-image {
+      background-image: url('pfad/zum/bild3.jpg'); /* Noch kleineres Bild */
+    }
+  }
+  
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+    body {
+      font-size: 18px;
+      padding: 20px;
+    }
+  
+    .container {
+      max-width: 90%;
+    }
+  
+  .nordzypernbild{
+    background-image: url('images/zweitimo.jpeg');
+    width:600px;
+    height:200px;
+  }
+
+ 
+  
+  .zero{
+  visibility: hidden;}
+  
+  
+  
+  .zweitesbild{
+  
+      width: 400px;
+      height: 500px;
+      border-radius: 30px;
+     
+    
+     
+  
+  }
+  .boxen{
+
+    padding-right:150px;
+    padding-left: 150px;
+   
+  }
+  .zweiteilung{
+  display:flex;
+  gap: 30%;
+  justify-content: center;
+  align-items: center;
+  background-color: #FAFAFC;
+  padding-bottom: 5%;
+  }
+}
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .menu {
+      display: none;
+    }
+  
+    .content {
+      width: 100%;
+    }
+.team{ 
+
+    padding-left:30%;
+}
+    
+  }
+  
+  /* Querformat spezifisch */
+  @media screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+    .menu {
+      display: block;
+    }
+  
+    .content {
+      margin-left: 200px;
+    }
+  }
+
+  
+
+
+
+.zero{
+
+    height: 200px;
+    width: 200px;
+    position: absolute;
+}
+
+
+
+.firstimg{
+    width:100%;
+    height:80%;
+}
+
+.anliegen{
+   
+    margin-left:80px;
+        padding-left: 40px; 
+        padding: 20px;
+    
+        height: 60px;
+    }
+    
+
+.unsan{
+    color: #FF8A63;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 19.6px; 
+width:100%;
+height: 2px;
+letter-spacing: 2px;
+text-transform: uppercase;
+flex-shrink: 0;
+margin-bottom: 5px;
+}
+
+h1{
+    
+    flex-shrink: 0;
+    color: #45525B;
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 45px;
+    width:560px;
+height: 70px;
+}
+
+
+.Kauf{
+   
+flex-shrink: 0;
+    color: #6F7278;
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21.6px;
+    width: 666px;
+height: 303px;
+flex-shrink: 0;
+
+}
+
+
+.team{
+
+    padding-left: 60%;
+    padding-top: 5%;
+}
+
+.cap{
+    color: #6F7278;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 16.8px; /* 140% */
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+.valeriya{
+
+    width: 80px;
+   height: 80px;
+flex-shrink: 0;
+border-radius: 40px;
+border: 2px solid #CACCD1;
+
+}
+
+
+.dimitry{
+    width: 80px;
+   height: 80px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    border: 2px solid #CACCD1;
+
+}
+
+.nicole{
+   width: 80px;
+   height: 80px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    border: 2px solid #CACCD1;
+    
+}
+
+
+.über{
+
+
+    color: #45525B;
+font-family: Poppins;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 15px;
+}
+
+.nicolet{
+   display:flex;
+   justify-content: flex-start;
+   gap:10px;
+   
+}
+
+
+.Dima{
+    display:flex;
+    justify-content: flex-start;
+    gap:10px;
+}
+
+
+.valeriyaone {
+display: flex;
+justify-content: flex-start;
+gap:10px;
+}
+
+
+
+
+
+
+
+
+
+.zweiteseite{
+    
+    margin-left:80px;
+    padding-left: 40px; 
+    padding: 20px;
+    
+    height: 60px;
+  
+  
+}
+
+
+.bitte{
+
+    background-color: #FAFAFC;
+}
+
+
+
+
+
+
+.Ansprüche{
+    color: #FF8A63;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.6px; 
+    width: 900px;
+    height: 2px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    margin-bottom: 5px;
+   
+    
+   
+}
+
+h2{
+    
+flex-shrink: 0;
+    color: #45525B;
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 45px;
+    width: 700px;
+height: 70px;
+
+}
+
+.zweiteilung{
+  display:flex;
+  gap: 10%;
+  justify-content: center;
+  align-items: center;
+  background-color: #FAFAFC;
+  padding-bottom: 5%;
+
+}
+
+.Unterpunkte{
+    color: #45525B;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 19.6px; /* 140% */
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+.beschreibung{
+    width: 470px;
+    color: #6F7278;
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.6px;
+}
+.zweitesbild{
+
+    width: 480px;
+    height: 588px;
+    border-radius: 30px;
+    padding-left: 40%;
+   
+
+}
+
+
+
+
+
+
+
+
+
+.dritteSeite{
+    margin-left:80px;
+    padding-left: 40px; 
+    padding: 20px;
+    width: 360px;
+    height: 60px;
+
+}
+
+.keinea{
+
+    margin-left:80px;
+padding-left: 40px; 
+    padding: 5px;
+flex-shrink: 0;
+color: #6F7278;
+text-align: justify;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 21.6px; 
+
+}
+
+.stich{
+
+    margin-left:80px;
+    padding-left: 40px; 
+    padding: 9px;
+flex-shrink: 0;
+color: #6F7278;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 21.6px; 
+width: 684px;
+
+list-style-type: circle;
+
+}
+
+
+
+.nord{
+    color: #FF8A63;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.6px; 
+    width: 900px;
+    height: 2px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    margin-bottom: 5px;
+    
+
+}
+
+
+h3{
+    flex-shrink: 0;
+    color: #45525B;
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 45px;
+    width: 560px;
+    height: 90px;
+    padding-bottom: 5px;
+}
+
+.keinname{
+    display:flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+.Nordzypern{
+    margin-left:80px;
+    padding-left: 40px; 
+    padding: 20px;
+    
+flex-shrink: 0;
+color: #6F7278;
+text-align: justify;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 21.6px; 
+width: 684px;
+flex-shrink: 0;
+   
+}
+
+
+.funktioniere{
+height:875px;
+
+}
+.Stichpunkte{
+    color: #45525B;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ichflehe{
+    background-color: #FAFAFC;
+    
+}
+
+
+.vierteSeite{
+
+    margin-left:80px;
+    padding-left: 60px; 
+    padding: 20px;
+    width: 360px;
+    height: 60px;
+}
+
+
+.angebote{
+
+   
+    
+    color: #FF8A63;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.6px; 
+    width: 900px;
+    height: 2px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    margin-bottom: 5px;
+    padding-top: 5%;
+}
+
+h4{
+    flex-shrink: 0;
+    color: #45525B;
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 45px;
+    width: 560px;
+    height: 10px;
+    
+}
+
+
+.topi{
+ 
+    
+flex-shrink: 0;
+color: #6F7278;
+text-align: justify;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 21.6px; 
+width: 684px;
+flex-shrink: 0;
+padding-bottom: 10%;
+
+}
+.n1{
+
+    width: 379px;
+    height: 267px;
+    flex-shrink: 0; 
+}
+.n2{
+
+    width: 379px;
+height: 267px;
+flex-shrink: 0;
+}
+
+.n3{
+    width: 379px;
+height: 267px;
+flex-shrink: 0;
+}
+
+.n4{
+    width: 379px;
+    height: 267px;
+    flex-shrink: 0;  
+}
+
+.n5{
+    width: 379px;
+height: 267px;
+flex-shrink: 0;
+}
+
+.n6{
+    width: 379px;
+height: 267px;
+flex-shrink: 0;
+}
+
+
+.ersterblock{
+
+    display: flex;
+    gap: 50px;
+    justify-content:center;
+    align-items: center;
+   padding-bottom: 5%;
+   padding-top: 18%;
+   
+}
+
+.zweiterblock{
+padding-top:5%;
+    display:flex;
+    gap:50px;
+    justify-content:center;
+    align-items: center;
+
+}
+
+.villa{
+    padding-bottom: 5%;
+
+    color: #6F7278;
+text-align: left;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 16.8px; 
+letter-spacing: 2px;
+text-transform: uppercase;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.projekti{
+   
+height: 30px;
+    color: #45525B;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+
+.untertext{
+
+   color:#45525B;
+   font-size:8px;
+   font-family: Poppins;
+   font-weight: 400;
+   text-align: center;
+   background-color: white;
+   text-align: center;
+
+}
+
+.nummer{
+    border-radius: 8px;
+background: #FFF;
+box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.03);
+width: 379px;
+height: 385px;
+
+}
+
+.zeige{
+    
+    width: 171px;
+    color: #45525B;
+font-family: Poppins;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+text-decoration:none;
+
+}
+
+.container{
+    padding-top:5%;
+    text-align: center;  
+}
+
+
+.alles{
+    padding-top:5%;
+    display:flex;
+    justify-content: space-around;
+    gap: 5px;
+    padding-bottom: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.derlink{
+    color: #FF8A63;
+    font-family: Poppins;
+    padding-left:  46%;
+
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.6px; 
+    width:100%;
+    height: 2px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    margin-bottom: 5px;
+    text-align: center;
+
+}
+
+.fünfteSeite {
+    margin-left:80px;
+    padding-left: 40px; 
+    padding: 20px;
+   height:250px;
+    padding-bottom: 8%;
+   
+     
+    
+}
+
+
+.unterschrift{
+    color: #45525B;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 21px;
+    text-decoration:none;
+}
+
+
+
+.leistung {
+    width: 550px; 
+    margin-left:80px;
+    font-family: Poppins;
+}
+
+.invs {
+    margin-left:80px;
+    color: #FF8A63;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.6px; 
+    width: 900px;
+    height: 2px;
+    flex-shrink: 0;
+    margin-bottom: 5px;
+    padding-top: 5%;
+   padding-bottom:30px;
+}
+
+h8 {
+    margin-left:80px;
+    
+    flex-shrink: 0;
+    color: #45525B;
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 45px;
+    
+ 
+    padding-bottom: 5px;
+}
+
+
+
+.investi {
+   
+    margin-left:80px;
+    color: #6F7278;
+    font-family: Poppins;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 21.6px;
+    width: 666px;
+    flex-shrink: 0;
+}
+.list {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+}
+
+.list li {
+    margin-bottom: 20px;
+    font-size: 16px; 
+}
+
+
+.first-list {
+    counter-reset: list-counter 0; 
+}
+
+.first-list li::before {
+    content: counter(list-counter, decimal-leading-zero) ". "; 
+    counter-increment: list-counter;
+    font-size: 30px;
+    font-weight: 100;
+    margin-right: 10px;
+    font-family: Poppins;
+}
+
+
+.second-list {
+    counter-reset: list-counter 2; 
+}
+
+.second-list li::before {
+    content: counter(list-counter, decimal-leading-zero) ". "; 
+    counter-increment: list-counter;
+    font-size: 30px;
+    font-weight: 100;
+    margin-right: 10px;
+    font-family: Poppins;
+}
+
+.numbers{
+    display:flex;
+    justify-content: space-around;
+}
+
+
+
+.autu{
+
+padding-left: 45%;
+}
+
+
+
+
+
+
+
+
+
+.fast{
+
+    background-color: #FAFAFC;
+}
+
+
+.newsi{
+
+    margin-left:80px;
+    padding-left: 40px; 
+    padding: 20px;
+   height:250px;
+    
+    
+    
+
+    
+}
+
+
+.orangi{
+   
+    color: #FF8A63;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.6px; 
+    width: 900px;
+    height: 2px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    margin-bottom: 5px;
+    padding-top: 5%;
+   padding-bottom:30px;
+}
+
+h7{
+    flex-shrink: 0;
+    color: #45525B;
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 45px;
+  
+    
+ 
+    
+}
+.newsbild{
+
+    width: 376px;
+height: 211px;
+flex-shrink: 0;
+border-radius: 10px 10px 0px 0px;
+
+}
+
+.akti{
+    width: 120px;
+    color: #FF8A63;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 16.8px; /* 140% */
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+.waskann{
+    width: 308px;
+    color: #45525B;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 19.2px; /* 120% */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.kontaktbtn {
+    display: flex;               
+    flex-direction: column;       
+    justify-content: center;      
+    align-items: center;          
+    text-align: center;           
+    padding: 20px;                
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.03);
+    border: 1px solid #000;
+background-color: #6F7278;
+    color: #45525B;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    padding-bottom: 5%;
+
+
+
+
+}
+
+.cont {
+padding: 10px 20px;           
+background-color: #007bff;    
+color: white;               
+border: none;                 
+border-radius: 5px;           
+cursor: pointer;             
+font-size: 16px;              
+}
+
+.cont:hover {
+background-color: #0056b3;    
+}
+
+footer{
+    
+    background-color: white;
+
+
+    height:40%;
+
+}
+html{
+    scroll-behavior: smooth;
+    width:100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.letztersatz{
+
+    color: #52503B;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.4px;
+}
+
+.logoende{
+    width: 160px;
+height: 178px;
+flex-shrink: 0;
+text-align: center;
+justify-content: center;
+}
+
+.logocontainer{
+text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.genug{
+
+    color: #CACCD1;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.6px; /* 140% */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+}
+
+
+.kontaktieren{
+
+    color: #FF8A63;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 43.2px;
+   
+}
+
+
+btn{
+
+
+    color: #FF8A63;
+    display: inline-flex;
+padding: 0px 158px 516.594px 82px;
+align-items: center;
+
+}
+
+
+.cont{
+
+    background-color: #FF8A63;
+   
+    border-radius: 8px;
+
+box-shadow: 0px 3px 15px 0px #6F7278;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 19.6px; /* 140% */
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+
+.dasendee{
+    display: flex;
+    justify-content: space-around;
+    color: #52503B;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.4px;
+    padding-bottom: 5%;
+  
+
+}
+
+.newsletteri{
+    color: #45525B;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 22.4px; 
+width: 463px;
+}
+
+
+.ltzü{
+
+    color: #FF8A63;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 19.6px; 
+letter-spacing: 2px;
+text-transform: uppercase;
+width: 108px;
+}
+
+.wieso{
+    text-decoration: none;
+    list-style:none;
+    color: #52503B;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 22.4px;
+}
+
+
+.sz {
+    display: flex;              
+    justify-content: flex-end;  
+    gap: 15px;                
+    align-items: center;        
+    padding-right: 20px;        
+}
+
+.sz img {
+    width: 30px; 
+    height: auto;
+}
+
+
+
+.email-input {
+    padding: 10px;
+    font-size: 16px;
+    width: 250px;
+    margin-right: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(229, 235, 231, 0.19);
+    background: #CACCD1;
+}
+
+.email-submit {
+    padding: 10px 20px;
+
+    border-radius: 10px;
+    background: #3A4443;
+    color: #FF8A63;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.4px;
+    cursor: pointer;
+}
+
+.email-submit:hover {
+    background-color: #0056b3;
+   
+}
+
