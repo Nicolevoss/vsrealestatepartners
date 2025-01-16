@@ -610,6 +610,9 @@ width:80%;
 margin-right:auto;
 }
 
+.letzter_Absatz{
+  text-align:left;
+}
 }
     
 @media only screen and (min-width: 390px) and (orientation: portrait) {
@@ -651,11 +654,12 @@ margin-right:auto;
   flex-direction: column;
  }
 
-
+ 
  .islmap{
 
 width:350px;
 height:200px;
+text-align:left;
 
  }
     
@@ -666,6 +670,9 @@ text-justify: none;
 
 
  }
+ .letzter_Absatz{
+  text-align:left;
+}
 }
 
 @media only screen and (min-width: 390px) and (max-width: 844px) and (-webkit-min-device-pixel-ratio: 3) {
@@ -689,7 +696,7 @@ text-justify: none;
  }
 
 
- 
+  
     
  .ersttext{
 
@@ -697,6 +704,9 @@ width:100%;
 
 
  }
+ .letzter_Absatz{
+  text-align:left;
+}
 
  
 }
@@ -716,4 +726,11 @@ width:100%;
   }
 
  
+}
+
+@media only screen and (min-width: 390px) and (orientation: landscape) {
+  .islmap{
+    width: 600px;
+    height:400px;
+  }
 }

@@ -468,7 +468,7 @@ color:#3A4443;
 
  .frage{
 
-  width:100%;
+  display:none;
  }
 
  iframe{
@@ -500,6 +500,8 @@ width:100%;
     margin-left: 200px;
   }
 
- 
+ .frage{
+  width:50%;
+ }
 }
   
