@@ -408,6 +408,15 @@ color:#3A4443;
         flex-direction:column;
     }
        
+    .frage{
+
+      width:100%;
+     }
+    
+     iframe{
+      width:100%;
+     }
+     
       }
       
     
@@ -435,4 +444,62 @@ color:#3A4443;
     width:5%;
     height:10%;
   }
+
+
+@media only screen and (min-width: 390px) and (max-width: 844px) and (-webkit-min-device-pixel-ratio: 3) {
+  .menu__box {
+    width: 70%;
+    padding: 50px 0;
+  }
+
+  .responsive-image {
+    width: 100%;
+    height: auto;
+    background-image: url('images/small-telefon.jpeg');
+  }
+.zero{
+  visibility:hidden;
+}
+
+
+ .parallel{
+  flex-direction: column;
+ }
+
+ .frage{
+
+  width:100%;
+ }
+
+ iframe{
+  width:100%;
+ }
+ 
+    
+ .ersttext{
+
+width:100%;
+
+
+ }
+
+ 
+}
+
+  
+
+
+
+/* Querformat spezifisch */
+@media screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+  .menu {
+    display: block;
+  }
+
+  .content {
+    margin-left: 200px;
+  }
+
+ 
+}
   
