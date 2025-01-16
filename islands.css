@@ -603,9 +603,105 @@ width:80%;
 text-align: left;
 
  }
-    }
+
+}
     
+@media only screen and (min-width: 390px) and (orientation: portrait) {
+  .menu {
+    display: none;
+  }
+
+  .content {
+    width: 100%;
+  }
+.team{ 
+
+  padding-left:30%;
+}
   
+}
+
+
+
+@media screen and (max-width: 768px) {
+ 
+
+  .menu__box {
+    width: 70%;
+    padding: 50px 0;
+  }
+
+  .responsive-image {
+    width: 100%;
+    height: auto;
+    background-image: url('images/small-telefon.jpeg');
+  }
+.zero{
+  visibility:hidden;
+}
+
+
+ .parallel{
+  flex-direction: column;
+ }
+
+
+ .islmap{
+
+width:600px;
+height:350px;
+
+ }
+    
+ .ersttext{
+
+width:80%;
+text-align: center;
+
+ }
+}
+
+@media only screen and (min-width: 390px) and (max-width: 844px) and (-webkit-min-device-pixel-ratio: 3) {
+  .menu__box {
+    width: 70%;
+    padding: 50px 0;
+  }
+
+  .responsive-image {
+    width: 100%;
+    height: auto;
+    background-image: url('images/small-telefon.jpeg');
+  }
+.zero{
+  visibility:hidden;
+}
+
+
+ .parallel{
+  flex-direction: column;
+ }
+
+
+ .islmap{
+
+width:600px;
+height:350px;
+
+ }
+    
+ .ersttext{
+
+width:80%;
+text-align: center;
+
+ }
+
+ .info-container{
+  margin-right: 40%;
+  text-align: center;
+ }
+}
+
   
 
 
