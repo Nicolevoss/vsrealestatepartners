@@ -690,8 +690,8 @@ text-align: center;
 
  .islmap{
 
-width:200px;
-height:50px;
+  width:80%;
+  height:350px;
 
  }
     
@@ -704,6 +704,9 @@ text-align: center;
 
  .info-container{
   margin-right: 40%;
+  text-align: center;
+ }
+ .carousel{
   text-align: center;
  }
 }
