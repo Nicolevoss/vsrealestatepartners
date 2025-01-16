@@ -213,3 +213,125 @@ color:#3A4443;
     color:#3A4443;
 
 }
+
+/* Wenn der Bildschirm kleiner als 480px ist */
+@media screen and (max-width: 480px) {
+    .responsive-image {
+      background-image: url('pfad/zum/bild3.jpg'); /* Noch kleineres Bild */
+    }
+  }
+  
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+    body {
+      font-size: 18px;
+      padding: 20px;
+    }
+
+
+  
+    .container {
+      max-width: 90%;
+    }
+  
+  .nordzypernbild{
+    background-image: url('images/zweitimo.jpeg');
+    width:600px;
+    height:200px;
+  }
+
+ 
+  
+  .zero{
+  visibility: hidden;}
+  
+  
+  
+
+  .boxen{
+
+    padding-right:150px;
+    padding-left: 150px;
+   
+  }
+  
+
+
+   
+}
+
+
+  
+        
+
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .menu {
+      display: none;
+    }
+  
+    .content {
+      width: 100%;
+    }
+.team{ 
+
+    padding-left:30%;
+}
+    
+  }
+
+
+
+  @media screen and (max-width: 768px) {
+   
+  
+    .menu__box {
+      width: 70%;
+      padding: 50px 0;
+    }
+  
+    .responsive-image {
+      width: 100%;
+      height: auto;
+      background-image: url('images/small-telefon.jpeg');
+    }
+  .zero{
+    visibility:hidden;
+  }
+
+ .fotoundkontakt{
+
+    flex-direction: column;
+ }
+    .kontaktunten{
+        flex-direction:column;
+    }
+       
+      }
+      
+    
+    
+  
+  
+  
+  /* Querformat spezifisch */
+  @media screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+    .menu {
+      display: block;
+    }
+  
+    .content {
+      margin-left: 200px;
+    }
+
+   
+  }
+
+
+
+.flagge{
+
+    width:5%;
+    height:10%;
+  }
+  
