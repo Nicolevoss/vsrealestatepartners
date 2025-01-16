@@ -661,7 +661,8 @@ height:200px;
     
  .ersttext{
 
-width:80%;
+width:95%;
+text-justify: none;
 
 
  }
@@ -692,7 +693,7 @@ width:80%;
     
  .ersttext{
 
-width:80%;
+width:100%;
 
 
  }
