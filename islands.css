@@ -592,8 +592,8 @@ visibility: hidden;}
 
  .islmap{
 
-width:600px;
-height:350px;
+width:300px;
+height:150px;
 
  }
     
@@ -603,6 +603,12 @@ width:80%;
 text-align: left;
 
  }
+
+ .info-container{
+
+  padding-left:15%;
+margin-right:auto;
+}
 
 }
     
