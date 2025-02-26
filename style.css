@@ -297,8 +297,28 @@ padding-bottom: 5px;
       
     
     
-  
-  
+      @media only screen and (max-width: 1440px) {
+        /* Beispiel-Stile für kleinere Ansichten */
+        body {
+          background-color: #f0f0f0;
+          font-size: 16px;
+        }
+        
+        .container {
+          width: 90%;
+          margin: 0 auto;
+        }
+        
+     .zweitesbild{
+
+
+       width: 480px;
+    height: 588px;
+    border-radius: 30px;
+    padding-left: 40%;
+        
+      }
+    } 
   
   /* Querformat spezifisch */
   @media screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
