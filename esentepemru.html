@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Партнёры по недвижимости</title>
+  <link rel="stylesheet" href="islands.css">
+</head>
+
+<body>
+  <header>
+    <a href="index_ru.html"><img class="zero" src="./images/logo.png" alt="Логотип"></a>
+    <img class="firstimg" src="./images/Esentepem/mi5.jpeg" alt="Главное изображение">
+    <nav class="hamburger-menu">
+      <input id="menu__toggle" type="checkbox" />
+      <label class="menu__btn" for="menu__toggle"><span></span></label>
+      <ul class="menu__box">
+        <li><a href="index.html">ГЛАВНАЯ</a></li>
+        <li><a href="members.html">ПРЕДЛОЖЕНИЯ</a></li>
+        <li><a href="new.html">НОВОСТИ</a></li>
+        <li><a href="contact.html">КОНТАКТ</a></li>
+        <li><a href="russian.html">РУССКИЙ</a></li>
+        <li><a href="englisch.html">АНГЛИЙСКИЙ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="parallel">
+      <div class="carousel">
+        <div class="carousel-images">
+          <img src="images/Esentepem/mi2.jpeg" alt="Изображение 1">
+          <img src="images/Esentepem/mi3.jpeg" alt="Изображение 2">
+          <img src="images/Esentepem/mi4.jpeg" alt="Изображение 3">
+          <img src="images/Esentepem/mi6.jpeg" alt="Изображение 4">
+        </div>
+        <div class="carousel-buttons">
+          <button id="prev">&#10094;</button>
+          <button id="next">&#10095;</button>
+        </div>
+        <div class="carousel-thumbnails">
+          <img src="images/habitat/ha2.jpeg" data-index="0" alt="Миниатюра 1">
+          <img src="images/habitat/ha3.jpeg" data-index="1" alt="Миниатюра 2">
+          <img src="images/habitat/ha4.jpeg" data-index="2" alt="Миниатюра 3">
+          <img src="images/habitat/ha1.jpeg" data-index="3" alt="Миниатюра 4">
+          <img src="images/habitat/ha5.jpeg" data-index="4" alt="Миниатюра 5">
+          <img src="images/habitat/ha6.jpeg" data-index="5" alt="Миниатюра 6">
+        </div>
+      </div>
+    </div>
+
+    <div class="ersttext">
+      <h1>О проекте</h1>
+      <p>Предлагаются уникальные жилые единицы, сочетающие в себе стиль, уют и разнообразие.</p>
+      <p>Проект включает пять современных жилых корпусов с элегантными квартирами, а также очаровательные мини-виллы с повышенным уровнем комфорта:</p>
+      <ul>
+        <li><strong>Квартиры 1+1</strong> – 70 м², идеально подходят для комфортной современной жизни.</li>
+        <li><strong>Лофты 2+1</strong> – 105 м² с частным бассейном — для тех, кто ценит дизайн и уединение.</li>
+        <li><strong>Мини-виллы 1+1</strong> – 50 м² с собственным бассейном, создающие эксклюзивную атмосферу.</li>
+      </ul>
+    </div>
+
+    <div class="info-container">
+      <div class="info-grid">
+        <div class="info-item">
+          <p class="info-title">Цены от</p>
+          <p class="info-value">€213.750</p>
+        </div>
+        <div class="info-item">
+          <p class="info-title">Сдача</p>
+          <p class="info-value">2025</p>
+        </div>
+        <div class="info-item">
+          <p class="info-title">Расположение</p>
+          <p class="info-value">Эсентепе</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="letzter_Absatz">
+      <h2>План комплекса</h2>
+      <img class="islmap" src="images/Esentepem/mimap.jpeg" alt="План территории">
+    </div>
+
+    <article id="butto" class="kontaktbtn">
+      <p class="genug">Остались вопросы?</p>
+      <p class="kontaktieren">Свяжитесь с нами сейчас</p>
+      <a href="contact.html"><button class="cont">Контакт</button></a>
+    </article>
+
+    <script>
+      const carouselImages = document.querySelector('.carousel-images');
+      const images = document.querySelectorAll('.carousel-images img');
+      const prevButton = document.getElementById('prev');
+      const nextButton = document.getElementById('next');
+      const thumbnails = document.querySelectorAll('.carousel-thumbnails img');
+
+      let currentIndex = 0;
+
+      function updateCarousel(index) {
+        currentIndex = (index + images.length) % images.length;
+        const offset = -currentIndex * 100;
+        carouselImages.style.transform = `translateX(${offset}%)`;
+        thumbnails.forEach((thumb, i) => {
+          thumb.classList.toggle('active', i === currentIndex);
+        });
+      }
+
+      prevButton.addEventListener('click', () => updateCarousel(currentIndex - 1));
+      nextButton.addEventListener('click', () => updateCarousel(currentIndex + 1));
+      thumbnails.forEach((thumb, i) => {
+        thumb.addEventListener('click', () => updateCarousel(i));
+      });
+
+      updateCarousel(currentIndex);
+    </script>
+  </main>
+</body>
+</html>
