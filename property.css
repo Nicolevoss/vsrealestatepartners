@@ -53,6 +53,19 @@
   --border-radius-lg: 30px;
 }
 
+
+/* Automatisch dunkel, wenn das System Dark Mode nutzt */
+@media (prefers-color-scheme: dark){
+  :root{
+    color-scheme: dark;
+    --bg: #0b0f19;
+    --text: #white;
+    --card: #111827;
+    --border: #374151;
+    --link: #7cc4ff;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -69,6 +82,12 @@ body {
   font-family: Poppins, sans-serif;
   color: var(--text-color);
   line-height: 1.5;
+   /* Automatisch dunkel, wenn das System Dark Mode nutzt */
+background: var(--bg); color: var(--text); }
+a{ color: var(--link); }
+.menu__box{ background: var(--card); border:1px solid var(--border);
+
+
 }
 
 #menu__toggle {
@@ -121,8 +140,9 @@ body {
   visibility: hidden;
   top: 0;
   left: -100%;
-  width: 30%;
-  height: 100%;
+  width: 25%;
+  height: 45%;
+  border-radius: 100px; 
   margin: 0;
   padding: 80px 0;
   list-style: none;
@@ -134,6 +154,10 @@ body {
   box-shadow: var(--shadow-lg);
   z-index: 9;
   transition: left 0.4s ease, visibility 0.4s ease;
+  background-image: 
+  linear-gradient(to top, rgb(214, 208, 208) 0%, white 50%);
+
+ 
 }
 
 .menu__item {

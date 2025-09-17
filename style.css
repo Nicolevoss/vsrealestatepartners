@@ -33,6 +33,23 @@
   position: relative;
 }
 
+
+/* Automatisch dunkel, wenn das System Dark Mode nutzt */
+@media (prefers-color-scheme: dark){
+  :root{
+    color-scheme: dark;
+    --bg: #0b0f19;
+    --text: white;
+    --card: #111827;
+    --border: white;
+    --link: #7cc4ff;
+  }
+}
+
+
+
+*{ transition: background-color .2s ease, color .2s ease; }
+
 :root {
   --primary-color: #FF8A63;
   --primary-light: #FFB39C;
@@ -74,6 +91,12 @@ body {
   font-family: Poppins, sans-serif;
   color: var(--text-color);
   line-height: 1.5;
+
+/* Automatisch dunkel, wenn das System Dark Mode nutzt */
+  background: var(--bg); color: var(--text); }
+a{ color: var(--link); }
+.menu__box{ background: var(--card); border:1px solid var(--border);
+
 }
 
 .menu__btn {
@@ -113,7 +136,7 @@ body {
 .menu__btn:hover > span,
 .menu__btn:hover > span::before,
 .menu__btn:hover > span::after {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
 .menu__box {
@@ -122,8 +145,9 @@ body {
   visibility: hidden;
   top: 0;
   left: -100%;
-  width: 30%;
-  height: 100%;
+  width: 25%;
+  height: 45%;
+  border-radius: 100px; 
   margin: 0;
   padding: 80px 0;
   list-style: none;
@@ -135,6 +159,12 @@ body {
   box-shadow: var(--shadow-lg);
   z-index: 9;
   transition: left 0.4s ease, visibility 0.4s ease;
+  background-image: 
+  linear-gradient(to top, rgb(214, 208, 208) 0%, white 50%);
+
+ 
+ 
+
 }
 
 .menu__item {
@@ -156,11 +186,15 @@ body {
   height: 2px;
   background-color: var(--primary-color);
   transition: width 0.3s ease, left 0.3s ease;
+
+
 }
 
 .menu__item:hover {
   background-color: transparent;
   color: var(--primary-color);
+
+
 }
 
 .menu__item:hover::after {
@@ -1903,11 +1937,14 @@ footer::before {
   .ltzü {
     margin: 0 auto 20px;
     text-align: center;
+    text-decoration: none;
   }
   
   .ltzü::after {
     left: 50%;
     transform: translateX(-50%);
+    display: none; 
+    
   }
   
   .wieso::before {
@@ -1916,5 +1953,6 @@ footer::before {
   
   .wieso:hover {
     transform: none;
+    display: none; 
   }
 }
