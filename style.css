@@ -1944,15 +1944,48 @@ footer::before {
     left: 50%;
     transform: translateX(-50%);
     display: none; 
+    list-style: none;
     
   }
   
   .wieso::before {
     display: none;
+    list-style: none;
   }
   
   .wieso:hover {
     transform: none;
     display: none; 
+    list-style: none;
   }
+
+  @media screen and (max-width: 480px) {
+    /* Bullets im Footer ausblenden */
+    footer ul,
+    footer ol {
+     list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    footer li {
+      list-style: none;
+    }
+  
+    /* Falls du eigene Icons via ::marker nutzt */
+    footer li::marker {
+      content: "";
+    }
+  
+    /* Falls deine Liste im Footer die Klasse .stich hat (eigene Sternchen) */
+    footer .stich {
+      padding-left: 0;
+      margin-left: 0;
+    }
+    footer .stich::before {
+      content: none !important;
+      display: none !important;
+    }
+  }
+  
 }
